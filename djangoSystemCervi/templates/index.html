@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../index.css">
+	<title>Administracion de clientes</title>
+</head>
+<body>
+<h1>Administración de clientes</h1>
+	<ul>
+		{% for pr in cliente %}
+		<li>
+			Nombre: {{pr.name}} | Dirección: {{pr.address}}
+		</li>
+		{%endfor%}
+	</ul>
+	
+</body>
+</html>
