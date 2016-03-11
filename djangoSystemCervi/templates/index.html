@@ -1,19 +1,35 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block page_title %}
+	{{title}}
+{% endblock %}
+
+{% block content %}
+<h1>Administración de clientes</h1>
+	<ul>
+		{% for pr in cliente %}
+		<li>
+			<a href="">{{pr.name}} | {{pr.address}}</a>
+		</li>
+		{% endfor %}
+	</ul>
+{% endblock %}
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="../index.css">
-	<title>Administracion de clientes</title>
+	<title>{{title}}</title>
 </head>
 <body>
 <h1>Administración de clientes</h1>
 	<ul>
 		{% for pr in cliente %}
 		<li>
-			Nombre: {{pr.name}} | Dirección: {{pr.address}}
+			<a href="">Nombre: {{pr.name}} | Dirección: {{pr.address}}</a>
 		</li>
 		{%endfor%}
 	</ul>
 	
 </body>
-</html>
+</html> -->

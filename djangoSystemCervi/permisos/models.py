@@ -9,6 +9,9 @@ class Permission(models.Model):
 	asks = models.CharField(max_length=255)
 	reason = models.CharField(max_length=255)
 	reference = models.CharField(max_length=255)
+	
 
 	def __str__(self):
 		return self.asks
+
+
